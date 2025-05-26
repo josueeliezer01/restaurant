@@ -1,0 +1,50 @@
+.experience {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: calc(100vh - 100px); /* ocupa tela menos a altura da navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.experience-content {
+  max-width: 800px;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.experience-title .highlight {
+  position: relative;
+}
+
+.underscore {
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  margin: 8px auto 0;
+}
+
+.experience-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-text {
+    font-size: 1rem;
+  }
+}
