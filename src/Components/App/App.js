@@ -5,6 +5,7 @@ import restaurantVideo from "../../assets/restaurant.mp4";
 import Experience from "../Experience/Experience";
 import Gallery from "../Gallery/Gallery";
 import Menu from "../Menu/Menu";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Experience />
       <Gallery />
       <Menu />
+      <ScrollToTop />
     </div>
   );
 }

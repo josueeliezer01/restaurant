@@ -2,14 +2,18 @@
   background-color: #000;
   color: #fff;
   padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   gap: 2rem;
 }
 
 .menu-category {
   display: flex;
   flex-direction: column;
+  width: 285px;
 }
 
 .category-title {
