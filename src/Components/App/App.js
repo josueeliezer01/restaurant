@@ -6,6 +6,7 @@ import Experience from "../Experience/Experience";
 import Gallery from "../Gallery/Gallery";
 import Menu from "../Menu/Menu";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import RestaurantLocation from "../RestaurantLocation/RestaurantLocation";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Gallery />
       <Menu />
       <ScrollToTop />
+      <RestaurantLocation />
     </div>
   );
 }

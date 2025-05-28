@@ -1,0 +1,44 @@
+.restaurant-location {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.address {
+  margin-bottom: 1.5rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 16rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+}
+
+.hours-list li {
+  margin-bottom: 0.5rem;
+}
+
+.day {
+  font-weight: 600;
+}
