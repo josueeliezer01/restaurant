@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/restaurant/static/css/main.208ec970.css",
-    "main.js": "/restaurant/static/js/main.6b8a484c.js",
+    "main.css": "/restaurant/static/css/main.ca6c2f06.css",
+    "main.js": "/restaurant/static/js/main.1666779c.js",
     "static/media/restaurant.mp4": "/restaurant/static/media/restaurant.738bec3dc3dde57242d7.mp4",
     "static/media/sala.jpg": "/restaurant/static/media/sala.3f60a6238f59b8aa8047.jpg",
     "static/media/file.jpg": "/restaurant/static/media/file.da5615855d7983082dea.jpg",
@@ -36,11 +36,11 @@
     "static/media/pastel.jpg": "/restaurant/static/media/pastel.d442a46a4467829dda92.jpg",
     "static/media/arrozDoce.jpg": "/restaurant/static/media/arrozDoce.a72c2f274033dcaf000f.jpg",
     "index.html": "/restaurant/index.html",
-    "main.208ec970.css.map": "/restaurant/static/css/main.208ec970.css.map",
-    "main.6b8a484c.js.map": "/restaurant/static/js/main.6b8a484c.js.map"
+    "main.ca6c2f06.css.map": "/restaurant/static/css/main.ca6c2f06.css.map",
+    "main.1666779c.js.map": "/restaurant/static/js/main.1666779c.js.map"
   },
   "entrypoints": [
-    "static/css/main.208ec970.css",
-    "static/js/main.6b8a484c.js"
+    "static/css/main.ca6c2f06.css",
+    "static/js/main.1666779c.js"
   ]
 }
