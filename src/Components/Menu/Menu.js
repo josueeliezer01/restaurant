@@ -108,6 +108,7 @@ export default function Menu() {
 
   return (
     <section className="menu-container">
+      <h1 className="menu-title">MENU</h1>
       {Object.entries(sortedData).map(([category, items]) => (
         <div
           key={category}

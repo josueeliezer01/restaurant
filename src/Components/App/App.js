@@ -8,16 +8,27 @@ import Menu from "../Menu/Menu";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import RestaurantLocation from "../RestaurantLocation/RestaurantLocation";
 
+// App.jsx
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Intro videoSrc={restaurantVideo} />
-      <Experience />
-      <Gallery />
-      <Menu />
+      <section id="inicio">
+        <Intro videoSrc={restaurantVideo} />
+      </section>
+      <section id="experiencia">
+        <Experience />
+      </section>
+      <section id="galeria">
+        <Gallery />
+      </section>
+      <section id="cardapio">
+        <Menu />
+      </section>
+      <section id="contato">
+        <RestaurantLocation />
+      </section>
       <ScrollToTop />
-      <RestaurantLocation />
     </div>
   );
 }

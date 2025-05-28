@@ -15,6 +15,7 @@ const RestaurantLocation = () => {
       {/* Seção de Endereço */}
       <h2 className="section-title">LOCAL</h2>
       <p className="address">Nó 20 A25, 3505-577 Viseu</p>
+      
 
       {/* Mapa incorporado clicável */}
       <div
@@ -57,6 +58,8 @@ const RestaurantLocation = () => {
           <span className="day">segunda-feira:</span> Fechado
         </li>
       </ul>
+      <h2 className="section-title">CONTATO</h2>
+      <p className="address">Telefone: 232 479 106</p>
     </section>
   );
 };
