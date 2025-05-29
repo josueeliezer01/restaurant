@@ -1,24 +1,20 @@
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import Logo from "../Logo/Logo";
-import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fecha o menu quando um link é clicado
-  const handleLinkClick = () => {
-    setMenuOpen(false);
-  };
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
@@ -69,18 +65,20 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#reserva"
+            <Link
+              to="/reserva"
+              className={pathname === "/reserva" ? "active" : ""}
               onClick={handleLinkClick}>
               RESERVE
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#sobre"
+            <Link
+              to="/sobre"
+              className={pathname === "/sobre" ? "active" : ""}
               onClick={handleLinkClick}>
               SOBRE NÓS
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

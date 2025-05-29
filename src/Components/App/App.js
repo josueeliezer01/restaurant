@@ -1,34 +1,59 @@
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Intro from "../Intro/Intro";
-import NavBar from "../NavBar/NavBar";
 import restaurantVideo from "../../assets/restaurant.mp4";
 import Experience from "../Experience/Experience";
 import Gallery from "../Gallery/Gallery";
 import Menu from "../Menu/Menu";
-import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import RestaurantLocation from "../RestaurantLocation/RestaurantLocation";
+import Reservation from "../Reservation/Reservation";
+// import About from "../About/About"; // to implement later
+import Layout from "../Layout/Layout";
 
-// App.jsx
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <section id="inicio">
-        <Intro videoSrc={restaurantVideo} />
-      </section>
-      <section id="experiencia">
-        <Experience />
-      </section>
-      <section id="galeria">
-        <Gallery />
-      </section>
-      <section id="cardapio">
-        <Menu />
-      </section>
-      <section id="contato">
-        <RestaurantLocation />
-      </section>
-      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="inicio">
+                  <Intro videoSrc={restaurantVideo} />
+                </section>
+                <section id="experiencia">
+                  <Experience />
+                </section>
+                <section id="galeria">
+                  <Gallery />
+                </section>
+                <section id="cardapio">
+                  <Menu />
+                </section>
+                <section id="contato">
+                  <RestaurantLocation />
+                </section>
+              </>
+            }
+          />
+          <Route
+            path="/reserva"
+            element={<Reservation />}
+          />
+          {/* <Route path="/sobre" element={<About />} /> */}
+        </Route>
+        <Route
+          path="*"
+          element={
+            <Navigate
+              to="/"
+              replace
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
