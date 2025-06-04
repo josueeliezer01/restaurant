@@ -6,7 +6,6 @@ const Reservation = () => {
   const formRef = useRef();
   const [status, setStatus] = useState(null);
 
-  // Initialize EmailJS with your user/public key (replace with your actual key)
   useEffect(() => {
     init(process.env.REACT_APP_EMAILJS_USER || "s74KM-SUQ_Y6RE29W");
   }, []);
@@ -23,7 +22,7 @@ const Reservation = () => {
       )
       .then(() => {
         setStatus("SUCCESS");
-        formRef.current.reset(); // clear form
+        formRef.current.reset();
       })
       .catch(() => {
         setStatus("ERROR");

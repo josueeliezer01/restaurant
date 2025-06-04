@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import Logo from "../Logo/Logo";
@@ -18,7 +18,10 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-      <Logo className="logo" />
+      <Link to="/" onClick={handleLinkClick} className="logo-button">
+        <Logo className="logo" />
+      </Link>
+
       <div id="menuToggle">
         <input
           type="checkbox"
@@ -30,37 +33,28 @@ const NavBar = () => {
         <span></span>
         <ul id="menu">
           <li>
-            <a
-              href="#inicio"
-              onClick={handleLinkClick}>
+            {/* Agora INÍCIO é um Link para "/" */}
+            <Link to="/" onClick={handleLinkClick}>
               INÍCIO
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#experiencia"
-              onClick={handleLinkClick}>
+            <a href="#experiencia" onClick={handleLinkClick}>
               A EXPERIÊNCIA
             </a>
           </li>
           <li>
-            <a
-              href="#galeria"
-              onClick={handleLinkClick}>
+            <a href="#galeria" onClick={handleLinkClick}>
               GALERIA
             </a>
           </li>
           <li>
-            <a
-              href="#cardapio"
-              onClick={handleLinkClick}>
+            <a href="#cardapio" onClick={handleLinkClick}>
               MENU
             </a>
           </li>
           <li>
-            <a
-              href="#contato"
-              onClick={handleLinkClick}>
+            <a href="#contato" onClick={handleLinkClick}>
               ENDEREÇO E CONTATO
             </a>
           </li>
@@ -68,7 +62,8 @@ const NavBar = () => {
             <Link
               to="/reserva"
               className={pathname === "/reserva" ? "active" : ""}
-              onClick={handleLinkClick}>
+              onClick={handleLinkClick}
+            >
               RESERVE
             </Link>
           </li>
@@ -76,7 +71,8 @@ const NavBar = () => {
             <Link
               to="/sobre"
               className={pathname === "/sobre" ? "active" : ""}
-              onClick={handleLinkClick}>
+              onClick={handleLinkClick}
+            >
               SOBRE NÓS
             </Link>
           </li>

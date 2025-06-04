@@ -1,7 +1,6 @@
 #menuToggle {
   display: block;
   position: absolute;
-  top: 50px;
   right: 25px;
   -webkit-user-select: none;
   user-select: none;
@@ -76,14 +75,14 @@
   background: rgba(0, 0, 0, 0.95);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 100px 0 50px; /* Espaço superior de 100px e inferior de 50px */
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   z-index: 0;
+  overflow-y: scroll; /* Permite rolagem vertical */
 }
 
 #menu li {
@@ -96,7 +95,7 @@
 }
 
 .logo {
-  position: fixed;
+  position: relative;
   z-index: 9999;
 }
 
@@ -105,7 +104,10 @@
   top: 0;
   width: 100%;
   height: 100px;
-  padding: 20px;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   z-index: 9999;
   background: transparent;
   transition: background-color 0.3s ease;
@@ -117,4 +119,18 @@
 
 section {
   scroll-margin-top: 100px;
+}
+
+#menu li {
+  padding: 15px 0;
+  font-size: 36px;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  #menu li {
+    font-size: 28px;
+    padding: 10px 0;
+  }
 }
