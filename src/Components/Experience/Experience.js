@@ -1,6 +1,19 @@
 import "./Experience.css";
 
 const Experience = () => {
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById("third-section");
+    if (nextSection) {
+      const sectionTop =
+        nextSection.getBoundingClientRect().top + window.pageYOffset;
+      const offset = 90;
+      window.scrollTo({
+        top: sectionTop - offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       id="next-section"
@@ -34,6 +47,26 @@ const Experience = () => {
           <br />
           Descubra o sabor da tradição. Viva Portugal à mesa.
         </p>
+      </div>
+
+      {/* Overlay no rodapé do Experience */}
+      <div className="experience-overlay">
+        <button
+          className="scroll-button"
+          onClick={handleScrollDown}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
       </div>
     </section>
   );

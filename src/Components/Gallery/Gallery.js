@@ -18,7 +18,9 @@ const breakpointColumnsObj = {
 
 export default function Gallery() {
   return (
-    <div className="gallery-container">
+    <div
+      className="gallery-container"
+      id="third-section">
       <header className="gallery-header">
         <h2 className="gallery-title">Galeria</h2>
         <p className="gallery-description">

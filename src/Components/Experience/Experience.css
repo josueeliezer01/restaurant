@@ -4,6 +4,7 @@
   width: 100%;
   min-height: calc(100vh - 100px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -13,6 +14,7 @@
 
 .experience-content {
   max-width: 800px;
+  z-index: 1;
 }
 
 .experience-title {
@@ -20,10 +22,6 @@
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
-}
-
-.experience-title .highlight {
-  position: relative;
 }
 
 .underscore {
@@ -39,12 +37,43 @@
   margin-top: 20px;
 }
 
+.experience-overlay {
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.experience-overlay .scroll-button {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease;
+}
+
+.experience-overlay .scroll-button:hover {
+  transform: translateY(5px);
+}
+
 @media (max-width: 768px) {
   .experience-title {
     font-size: 2rem;
   }
-
   .experience-text {
     font-size: 1rem;
+  }
+
+  .experience-overlay {
+    margin-top: 20px;
+    padding: 10px 0;
   }
 }
