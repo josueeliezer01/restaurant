@@ -7,7 +7,7 @@ import Gallery from "../Gallery/Gallery";
 import Menu from "../Menu/Menu";
 import RestaurantLocation from "../RestaurantLocation/RestaurantLocation";
 import Reservation from "../Reservation/Reservation";
-// import About from "../About/About"; // to implement later
+import AboutUs from "../AboutUs/AboutUs";
 import Layout from "../Layout/Layout";
 
 function App() {
@@ -41,7 +41,10 @@ function App() {
             path="/reserva"
             element={<Reservation />}
           />
-          {/* <Route path="/sobre" element={<About />} /> */}
+          <Route
+            path="/sobre"
+            element={<AboutUs />}
+          />
         </Route>
         <Route
           path="*"
