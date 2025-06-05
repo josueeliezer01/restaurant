@@ -1,10 +1,18 @@
+/* AboutUs.css */
 .about-us {
   background-color: #000;
   color: #fff;
-  height: calc(100vh - 110px);
-  padding: 120px 20px 0 20px;
+
+  /* 2) altura total da viewport; não quero que empurre o footer */
+  min-height: 100vh;
+
+  /* 3) adiciono um padding-bottom igual (ou maior) à altura do footer
+        por exemplo: se o footer tem ~80px de altura (20px de padding + conteúdo),
+        ponha 100px de padding-bottom para ter folga. */
+  padding: 120px 20px 100px 20px;
 }
 
+/* O container agora pode crescer livremente e usar scroll de página inteira */
 .about-container {
   max-width: 800px;
   margin: 0 auto;

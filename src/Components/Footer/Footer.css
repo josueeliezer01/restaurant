@@ -3,14 +3,17 @@
   color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-around;
   padding: 0 20px;
 }
 
