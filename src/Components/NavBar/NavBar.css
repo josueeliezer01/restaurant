@@ -136,9 +136,22 @@ section {
   text-align: center;
 }
 
-@media (max-width: 375px) {
-  #menu li {
-    font-size: 28px;
-    padding: 10px 0;
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  #menuToggle span {
+    width: 28px;
+    height: 3px;
+    margin-bottom: 4px;
+  }
+
+  #menuToggle input {
+    width: 35px;
+    height: 28px;
+    top: -6px;
+    right: 0px;
   }
 }
